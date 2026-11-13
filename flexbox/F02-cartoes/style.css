@@ -1,0 +1,109 @@
+/* F02 · Cartões de produtos
+ * Objetivo: Apresenta quatro produtos em cartões. Quando já não houver espaço, o cartão
+ * seguinte passa para a fila de baixo. Em cada fila, os preços devem terminar à mesma
+ * altura.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Prepara a lista de quatro produtos
+ * Onde começar: .f02 .produtos
+ *
+ *   1. Localiza os quatro li dentro de .produtos. Retira os marcadores, a margem e o
+ *      recuo da lista.
+ *   2. Transforma .produtos numa fila de Flexbox com 16 px entre cartões. Permite a
+ *      passagem para outra fila.
+ *   3. Deixa os cartões da mesma fila esticarem até à altura do mais alto.
+ *
+ * Confirma: Sempre que dois cartões ficam na mesma fila, há espaço entre eles e os seus
+ * limites inferiores estão alinhados. Ainda não precisas de obter um número certo de
+ * cartões por fila.
+ * Se precisares de uma pista: Para permitir a quebra entre cartões, atua na lista com
+ * flex-wrap.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Define a largura de partida
+ * Onde começar: .f02 .produto
+ *
+ *   1. Em .produto, define 272 px como largura de partida de cada cartão.
+ *   2. Deixa cada cartão crescer e encolher com o mesmo fator: 1. Permite ao conteúdo
+ *      encolher com o cartão.
+ *   3. Mantém uma só regra para todas as larguras: testa-a sem acrescentar media
+ *      queries.
+ *
+ * Confirma: A 1100 px, há três cartões na primeira fila e um na segunda. A 768 px, há
+ * dois por fila. A 390 px, fica um por fila.
+ * Se precisares de uma pista: Se usares a abreviatura flex, lê os valores pela ordem:
+ * crescer, encolher, base.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Empilha o conteúdo de cada cartão
+ * Onde começar: .f02 .produto
+ *
+ *   1. Faz de cada .produto um contentor Flexbox em coluna. Alinha os seus filhos à
+ *      esquerda.
+ *   2. Define 192 px de altura mínima e 12 px entre o título, a descrição e o rodapé.
+ *   3. Retira as margens do título e dos parágrafos para não somarem espaço ao
+ *      intervalo.
+ *
+ * Confirma: Cada cartão mede pelo menos 192 px de altura. Nos cartões com pouco texto
+ * pode sobrar espaço abaixo do rodapé; vais usá-lo a seguir.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Leva os preços para a base
+ * Onde começar: .f02 .produto .rodape
+ *
+ *   1. No rodapé do cartão, usa uma margem superior automática para consumir o espaço
+ *      livre acima dele.
+ *   2. Estica o rodapé à largura do cartão. Organiza o seu conteúdo em fila, centrado
+ *      na vertical e com pelo menos 12 px de intervalo.
+ *   3. Põe a categoria à esquerda e o preço à direita. Mantém o número e o símbolo do
+ *      euro na mesma linha.
+ *
+ * Confirma: A 768 px, compara dois cartões da mesma fila: os preços estão à mesma
+ * altura, junto à base.
+ * Se precisares de uma pista: Em .rodape, align-self muda a largura deste filho da
+ * coluna; justify-content distribui os dois textos dentro dele.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Alonga uma descrição e repõe o texto
+ * Onde começar: .f02 .produto no HTML
+ *
+ *   1. A 768 px, guarda uma cópia do texto da sandes. No HTML, repete a descrição até o
+ *      cartão ultrapassar os 192 px de altura.
+ *   2. Observa os rodapés da primeira fila. Repõe o texto inicial da sandes e volta a
+ *      guardar.
+ *   3. A 1100 px, verifica a largura do cartão do sumo.
+ *
+ * Confirma: Com o texto longo, os rodapés da primeira fila ficaram alinhados. No fim, o
+ * texto original está reposto e o sumo ocupa sozinho a segunda fila.
+ */
+/* Nesta etapa não precisas de escrever CSS. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * Cada cartão parte de 272 px e tem pelo menos 192 px de altura. Entre cartões: 16 px.
+ * Dentro do cartão: 12 px.
+ * Sem @media. Quando o cartão seguinte e o intervalo de 16 px não cabem, começa outra
+ * fila.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

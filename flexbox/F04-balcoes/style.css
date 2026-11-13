@@ -1,0 +1,106 @@
+/* F04 · Balcões de serviço
+ * Objetivo: Mostra os balcões Recolha e Preparação lado a lado. Os dois começam com a
+ * mesma largura. Quando a janela crescer, a Preparação ganha mais espaço; quando
+ * encolher, perde mais. No telemóvel, ficam empilhados.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Prepara os dois balcões
+ * Onde começar: .f04 .frente
+ *
+ *   1. Na .frente, coloca os dois balcões numa fila sem quebra. Deixa 16 px entre eles.
+ *   2. Limita a largura da .frente a 896 px e centra esse conjunto na página.
+ *   3. Faz os dois balcões esticarem até à mesma altura.
+ *
+ * Confirma: A 1100 px, os balcões ficam lado a lado. No inspetor, a largura do pai
+ * .frente não ultrapassa 896 px.
+ * Se precisares de uma pista: A largura máxima é para o conjunto. Margens laterais
+ * automáticas permitem centrá-lo.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Dá-lhes a mesma base
+ * Onde começar: .f04 .balcao
+ *
+ *   1. Em .balcao, dá a cada balcão uma base de 384 px e uma largura mínima de zero.
+ *   2. Para esta experiência, impede ambos de crescer e encolher. As etapas seguintes
+ *      vão mudar os fatores.
+ *   3. Soma 384 + 16 + 384. Compara o resultado com os 896 px do pai no computador.
+ *
+ * Confirma: A 1100 px, o inspetor mostra dois balcões de 384 px. Juntos com o intervalo
+ * ocupam 784 px; ficam 112 px livres.
+ * Se precisares de uma pista: No inspetor, vê a caixa do próprio .balcao, não a do
+ * texto que está lá dentro.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Divide o espaço que sobra
+ * Onde começar: .f04 .recolha; .f04 .preparacao
+ *
+ *   1. Em .recolha, permite crescer com o fator 1. Em .preparacao, usa o fator 2.
+ *      Mantém as bases.
+ *   2. A 1100 px, mede cada balcão. Subtrai 384 px a cada medida para comparares só os
+ *      ganhos.
+ *
+ * Confirma: A Preparação ganha cerca de 75 px; a Recolha ganha cerca de 37 px. É o
+ * ganho que duplica, não a largura final.
+ * Se precisares de uma pista: flex-grow reparte os 112 px livres. Há três partes no
+ * total: uma para a Recolha e duas para a Preparação.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Divide o espaço que falta
+ * Onde começar: .f04 .recolha; .f04 .preparacao
+ *
+ *   1. Atribui o fator de redução 1 à Recolha e 3 à Preparação. Mantém os fatores de
+ *      crescimento da etapa anterior.
+ *   2. A 768 px, mede cada balcão. Subtrai a medida encontrada aos 384 px iniciais.
+ *
+ * Confirma: A Preparação fica mais estreita do que a Recolha. Como as bases são iguais,
+ * a sua perda de largura é cerca do triplo.
+ * Se precisares de uma pista: Com falta de espaço, a propriedade a testar é
+ * flex-shrink.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Empilha e atualiza o posto A
+ * Onde começar: .f04 .balcao; @media (max-width: 640px)
+ *
+ *   1. Dentro de cada .balcao, empilha os textos à esquerda, com 12 px entre eles.
+ *      Retira as margens dos textos e leva .posto para o fundo com a margem superior
+ *      automática.
+ *   2. Até 640 px, muda .frente para coluna. Nos filhos .balcao, deixa o conteúdo
+ *      determinar a altura em vez da base de 384 px.
+ *   3. No HTML, acrescenta «Mostra o talão no posto A.» à descrição da Recolha. Mantém
+ *      a frase na entrega.
+ *
+ * Confirma: A 390 px, a Recolha fica acima da Preparação e não sobram 384 px de altura
+ * em cada balcão. O texto novo aparece no posto A.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * Conjunto: máximo 896 px. Cada balcão parte de 384 px. Entre balcões: 16 px; dentro de
+ * cada um: 12 px. Largura de partida do conjunto: 784 px.
+ * Até 640 px inclusive: balcões em coluna, sem base fixa. Acima de 640 px: lado a lado,
+ * com crescimento ou redução.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

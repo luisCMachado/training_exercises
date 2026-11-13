@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>G02 · Montra das especialidades</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-grid">
+    <!-- Ficha G02: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Grid / G02</p>
+        <h1>Montra das especialidades</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> Constrói uma montra de produtos. No telemóvel, todos os cartões
+          ficam em coluna. No computador, a tarte ocupa o espaço de quatro cartões: duas colunas por
+          duas filas, com o bolo e o chá à sua direita.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                <strong>16 px</strong> entre cartões. Altura mínima de cada fila: <strong>112
+                px</strong>. No destaque: <strong>8 px</strong> entre os textos e borda esquerda de
+                <strong>6 px</strong>.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Base: 1 coluna. A partir de <strong>640 px</strong>: 2 colunas, tarte com largura
+                dupla. A partir de <strong>1000 px</strong>: 3 colunas, tarte também com altura de
+                duas filas.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                <strong>390 px</strong>: tarte numa célula. <strong>768 px</strong>: ocupa 2 colunas
+                × 1 fila. <strong>1100 px</strong>: ocupa 2 colunas × 2 filas.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim. O asterisco assinala o elemento que a ficha pede para acrescentar.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Montra das especialidades</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO G02 | Classe do elemento que contém o exercício: g02. -->
+
+        <section class="g02" aria-labelledby="g02-titulo">
+          <h2 id="g02-titulo">Especialidades da casa</h2>
+          <div class="montra">
+            <article class="box destaque">
+              <p class="tag">Especialidade da semana</p>
+              <h3>Tarte de pera e amêndoa</h3>
+              <p>A massa descansa de véspera. A primeira tarte sai às nove.</p>
+            </article>
+
+            <article class="box">
+              <h3>Bolo de noz</h3>
+              <p>Fatia de bolo com nozes e canela.</p>
+            </article>
+
+            <article class="box">
+              <h3>Chá de lúcia-lima</h3>
+              <p>Infusão preparada no momento.</p>
+            </article>
+
+            <article class="box">
+              <h3>Tosta de cogumelos</h3>
+              <p>Em pão de centeio, com salsa.</p>
+            </article>
+
+            <article class="box">
+              <h3>Queijada</h3>
+              <p>Pequena, fresca e com raspa de limão.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO G02 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p>
+          <strong>Já conheces:</strong> Colunas iguais, gap, filas automáticas e minmax para deixar
+          crescer uma fila com o texto.
+        </p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> span 2 significa «ocupar duas». Usa-o no cartão da
+          tarte: grid-column para a largura e grid-row para a altura.
+        </p>
+        <ol>
+          <li>Começa por uma coluna</li>
+          <li>Arruma o cartão da tarte</li>
+          <li>Dá toda a primeira fila à tarte</li>
+          <li>Alarga a montra para três colunas</li>
+          <li>Acrescenta a sexta especialidade</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: seis cartões, um por fila. A tarte está no início; a
+              torrada, no fim.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: a tarte ocupa duas colunas na primeira fila. O bolo e
+              o chá começam à mesma altura na segunda.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: a tarte ocupa duas colunas e duas filas; a torrada
+              fica no canto inferior direito da terceira fila.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>
+          A 1100 px, mantém o destaque largo, mas limita-o a uma só fila. Prevê a nova posição do
+          chá.
+        </p>
+      </details>
+
+      <details class="lab-section lab-extra">
+        <summary>Para a discussão final: Linhas de início e de fim</summary>
+        <p>
+          No destaque a 1100 px, substitui a ocupação de duas filas por dois números de linha.
+          Compara o resultado e desfaz a mudança.
+        </p>
+        <p>Faz a experiência no inspetor e repõe as regras no fim.</p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>

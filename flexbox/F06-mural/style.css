@@ -1,0 +1,106 @@
+/* F06 · Mural de avisos
+ * Objetivo: Distribui seis avisos: três por fila no computador, dois a 768 px e um no
+ * telemóvel. No computador, a primeira fila fica no topo do mural e a segunda no fundo.
+ * Só a estrela decorativa muda de ordem.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Prepara o mural
+ * Onde começar: .f06 .mural
+ *
+ *   1. Em .mural, usa flex-flow para formar uma fila que possa quebrar. Deixa 16 px
+ *      entre avisos.
+ *   2. Define 512 px de altura e desenha um contorno para veres os limites do mural.
+ *   3. Retira os marcadores, as margens e o recuo da lista.
+ *
+ * Confirma: Vês um contorno com 512 px de altura e seis avisos por ordem. O número de
+ * cartões por fila só será definido na etapa seguinte.
+ * Se precisares de uma pista: flex-flow junta duas decisões: a direção e a
+ * possibilidade de passar para outra fila.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Faz caber três cartões por fila
+ * Onde começar: .f06 .aviso; .f06 .mural
+ *
+ *   1. A 1100 px, conta os intervalos entre três cartões: são dois, num total de 32 px.
+ *   2. Em .aviso, usa calc((100% - 32px) / 3) como base. Impede cada cartão de crescer
+ *      ou encolher e permite uma largura mínima de zero.
+ *   3. No pai .mural, alinha os cartões no topo de cada fila. Retira as margens dos
+ *      títulos e parágrafos.
+ *
+ * Confirma: A 1100 px, vês duas filas de três avisos. Cada cartão conserva a altura de
+ * que o seu texto precisa.
+ * Se precisares de uma pista: Calcula primeiro a largura que sobra depois dos
+ * intervalos; só depois a divides pelos três cartões.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Distribui as duas filas
+ * Onde começar: .f06 .mural
+ *
+ *   1. Distribui as filas do mural para deixar a primeira no topo e a segunda no fundo.
+ *   2. No inspetor, troca a distribuição para center. Observa o que muda e repõe a
+ *      distribuição pelos extremos.
+ *
+ * Confirma: As duas filas juntas deslocam-se para o meio com center e para os extremos
+ * quando repões o valor. O texto dentro dos avisos não muda de ordem.
+ * Se precisares de uma pista: align-content distribui filas. align-items alinha os
+ * itens dentro de cada fila.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Move apenas a estrela
+ * Onde começar: .f06 .enfeites; .f06 .estrela
+ *
+ *   1. Nos .enfeites, põe os três símbolos em fila com 8 px entre eles. Deixa 8 px
+ *      acima dos símbolos.
+ *   2. Atribui ordem 1 só à .estrela. Mantém o HTML e a ordem dos seis avisos.
+ *
+ * Confirma: No navegador, a estrela passa de segundo a último símbolo: círculo,
+ * losango, estrela. O primeiro aviso continua a ser «Troca de livros».
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Adapta o mural e atualiza o texto
+ * Onde começar: @media (max-width: 800px); @media (max-width: 640px)
+ *
+ *   1. Até 800 px, muda a base de .aviso para metade da largura depois de descontares o
+ *      intervalo de 16 px.
+ *   2. Escreve a regra de até 640 px depois dessa. Atribui a cada aviso 100% da largura
+ *      e deixa a altura do mural automática.
+ *   3. No HTML, substitui o texto da Esplanada por «A esplanada abre às 12h se não
+ *      chover.» Mantém o texto novo.
+ *
+ * Confirma: A 768 px, vês três filas de dois avisos. A 390 px, vês seis filas de um
+ * aviso e o contorno acompanha a altura do conteúdo.
+ * Se precisares de uma pista: Para dois cartões, parte da conta da etapa 2: há apenas
+ * um intervalo a descontar.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * Mural: altura de 512 px, exceto no formato estreito. Intervalo: 16 px entre avisos e
+ * 8 px entre símbolos. Três cartões: descontar 32 px; dois: descontar 16 px.
+ * Acima de 800 px: 3 por fila. Acima de 640 px e até 800 px: 2 por fila. Até 640 px
+ * inclusive: 1 por fila e altura automática.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

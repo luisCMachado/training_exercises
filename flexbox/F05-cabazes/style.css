@@ -1,0 +1,103 @@
+/* F05 · Seleção de cabazes
+ * Objetivo: Apresenta três cabazes e uma nota de recolha ao lado. Em cada opção, põe o
+ * círculo à esquerda, o nome e a descrição ao centro e o preço à direita. No telemóvel,
+ * a nota passa para baixo.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Coloca a escolha ao lado da nota
+ * Onde começar: .f05 .paineis; .f05 .escolha; .f05 .guia
+ *
+ *   1. Em .paineis, forma uma fila que possa quebrar. Alinha os dois painéis pelo topo
+ *      e deixa 16 px entre eles.
+ *   2. No painel .escolha, usa uma base de 400 px. No .guia, começa com 176 px. Ambos
+ *      podem encolher.
+ *   3. Quando sobrar espaço, dá três partes à escolha e uma à nota.
+ *
+ * Confirma: A 1100 px, a nota aparece à direita e termina pouco depois do seu texto.
+ * Ainda não tens de alinhar o interior das opções.
+ * Se precisares de uma pista: A regra de fila é do pai. As bases e os fatores de
+ * crescimento são dos dois filhos.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Agrupa as três opções
+ * Onde começar: .f05 .escolha; .f05 .opcoes
+ *
+ *   1. Mantém fieldset e legend. Retira a margem do fieldset e deixa-o encolher até ao
+ *      espaço disponível.
+ *   2. Na .opcoes, organiza as três opções em coluna, com 8 px entre elas.
+ *
+ * Confirma: As três opções surgem em linhas separadas, pela ordem «Pausa curta»,
+ * «Almoço leve», «Para partilhar». A nota fica por baixo a 390 px.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Alinha círculo, texto e preço
+ * Onde começar: .f05 .opcao; .f05 .texto; .f05 .preco
+ *
+ *   1. Em cada .opcao, forma uma fila: círculo, texto e preço. Centra-os na vertical e
+ *      deixa 12 px de intervalo.
+ *   2. Faz crescer só .texto e deixa-o encolher. Dentro dele, empilha o nome e a
+ *      descrição.
+ *   3. Mantém o círculo e o preço ao tamanho do conteúdo. Retira a margem do círculo e
+ *      evita que o preço mude de linha.
+ *
+ * Confirma: Os preços acabam junto da mesma margem direita. As descrições que não
+ * couberem passam para outra linha sem empurrar o preço.
+ * Se precisares de uma pista: O texto é ao mesmo tempo filho de uma fila e pai de uma
+ * pequena coluna.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Torna a linha fácil de selecionar
+ * Onde começar: .f05 .opcao
+ *
+ *   1. Dá a cada .opcao uma altura mínima de 56 px, uma borda de 1 px e 8 px de espaço
+ *      interior. Usa um ponteiro que indique que se pode clicar.
+ *   2. No navegador, clica nas palavras «Almoço leve». Depois usa as setas para
+ *      escolher outro cabaz. Mantém o indicador de foco.
+ *
+ * Confirma: O clique nas palavras marca o círculo. Ao mudar com as setas, só uma opção
+ * fica marcada.
+ * Se precisares de uma pista: O label e o input já tratam da seleção; não é preciso
+ * JavaScript.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Testa uma descrição mais comprida
+ * Onde começar: .f05 .texto no HTML
+ *
+ *   1. No HTML da opção «Almoço leve», acrescenta à descrição: «Podes trocar o sumo por
+ *      uma infusão de hortelã.» Guarda a alteração.
+ *   2. Vê a opção a 390 px e depois a 768 px. Mantém a frase nova na entrega.
+ *
+ * Confirma: O preço não se divide em duas linhas. A 390 px a nota fica por baixo; a 768
+ * px aparece à direita.
+ */
+/* Nesta etapa não precisas de escrever CSS. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * Bases dos painéis: 400 px e 176 px; entre eles: 16 px. Cada opção: altura mínima 56
+ * px, espaço interior 8 px, intervalo interno 12 px. Entre opções: 8 px.
+ * Sem @media. Se as duas bases e o intervalo não couberem, o painel da nota passa para
+ * baixo.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>G05 · Catálogo de lotes</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-grid">
+    <!-- Ficha G05: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Grid / G05</p>
+        <h1>Catálogo de lotes</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> Monta um catálogo de cinco lotes que ganhe colunas sozinho
+          quando houver espaço, sem @media. Os preços de cartões na mesma fila devem ficar
+          alinhados, mesmo quando uma descrição tem mais texto.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                Coluna: mínimo de <strong>240 px</strong>, ou a largura disponível se for menor.
+                <strong>16 px</strong> entre cartões; <strong>8 px</strong> entre as quatro filas de
+                cada cartão.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Sem @media. O número de colunas depende da largura útil do catálogo, do mínimo do
+                cartão e do intervalo.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                Com cinco lotes: uma coluna a <strong>390 px</strong>, duas a <strong>768
+                px</strong> e quatro a <strong>1100 px</strong>.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Catálogo de lotes</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO G05 | Classe do elemento que contém o exercício: g05. -->
+
+        <section class="g05" aria-labelledby="g05-titulo">
+          <h2 id="g05-titulo">Lotes de café em grão</h2>
+          <div class="lotes">
+            <article class="box">
+              <span class="tag">Brasil</span>
+              <h3>Serra Clara</h3>
+              <p>Cacau e avelã. Torra média.</p>
+              <p class="preco">8,50 € · 250 g</p>
+            </article>
+
+            <article class="box">
+              <span class="tag">Colômbia</span>
+              <h3>Vale do Sol</h3>
+              <p>Caramelo, final suave.</p>
+              <p class="preco">9,20 € · 250 g</p>
+            </article>
+
+            <article class="box">
+              <span class="tag">Etiópia</span>
+              <h3>Flor de Abril</h3>
+              <p>Notas florais e citrinos.</p>
+              <p class="preco">10,50 € · 250 g</p>
+            </article>
+
+            <article class="box">
+              <span class="tag">Peru</span>
+              <h3>Encosta Verde</h3>
+              <p>Doce e ligeiramente frutado.</p>
+              <p class="preco">9,40 € · 250 g</p>
+            </article>
+
+            <article class="box">
+              <span class="tag">México</span>
+              <h3>Rio Fundo</h3>
+              <p>Chocolate e especiarias.</p>
+              <p class="preco">9,10 € · 250 g</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO G05 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p>
+          <strong>Já conheces:</strong> O padrão do slide 42: repeat(auto-fill, minmax(...)), a
+          unidade fr e o espaço entre colunas.
+        </p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> A variação auto-fit encolhe as colunas
+          completamente vazias. Compara os dois valores retirando três dos cinco cartões.
+        </p>
+        <ol>
+          <li>Prevê quantos cartões cabem</li>
+          <li>Cria colunas sem @media</li>
+          <li>Alinha os preços no fundo</li>
+          <li>Experimenta um texto maior</li>
+          <li>Compara duas e cinco embalagens</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: um lote por fila. O preço fica abaixo do texto mesmo
+              na descrição mais longa.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: cinco lotes em três filas (2 + 2 + 1). Os preços dos
+              dois cartões da primeira fila alinham.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: quatro lotes na primeira fila; México começa a
+              segunda. Com apenas dois lotes, auto-fit alarga os dois.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>
+          Com cinco lotes, aumenta a largura mínima de 240 para 300 px. Prevê quantos cabem na
+          primeira fila a 1100 px.
+        </p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>G06 · Painel de encomendas</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-grid">
+    <!-- Ficha G06: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Grid / G06</p>
+        <h1>Painel de encomendas</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> Constrói o painel do balcão: o turno ocupa sempre a faixa de
+          cima. No telemóvel, os três estados das encomendas ficam empilhados; no computador, ficam
+          lado a lado. Depois faz avançar um pedido de um estado para outro.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                <strong>16 px</strong> entre os blocos do painel; <strong>8 px</strong> entre
+                pedidos e <strong>8 px</strong> de espaço interior em cada pedido. O turno ocupa
+                sempre a largura inteira.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Base: 1 coluna. A partir de <strong>640 px</strong>: 2 colunas. A partir de
+                <strong>1000 px</strong>: 3 colunas. Os limites estão incluídos.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                <strong>390 px</strong>: três estados empilhados. <strong>768 px</strong>: dois
+                estados lado a lado e Prontas na fila seguinte. <strong>1100 px</strong>: três
+                estados na mesma fila.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Painel de encomendas</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO G06 | Classe do elemento que contém o exercício: g06. -->
+
+        <section class="g06" aria-labelledby="g06-titulo">
+          <h2 id="g06-titulo">Painel de encomendas</h2>
+          <div class="quadro">
+            <p class="turno box"><strong>Turno da manhã</strong> · Balcão aberto até às 12h30.</p>
+
+            <section class="box espera">
+              <h3>Em espera</h3>
+              <ol>
+                <li><strong>#21</strong> Duas tostas de queijo</li>
+                <li><strong>#22</strong> Um chá de maçã</li>
+              </ol>
+            </section>
+
+            <section class="box preparo">
+              <h3>Em preparação</h3>
+              <ol>
+                <li><strong>#18</strong> Um galão e uma queijada</li>
+                <li><strong>#20</strong> Duas sandes de tomate</li>
+              </ol>
+            </section>
+
+            <section class="box prontas">
+              <h3>Prontas a levantar</h3>
+              <ol>
+                <li><strong>#17</strong> Um café e uma torrada</li>
+              </ol>
+            </section>
+          </div>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO G06 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p>
+          <strong>Já conheces:</strong> Colunas iguais com repeat, colocação automática por ordem do
+          HTML e intervalos com gap.
+        </p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> grid-area aceita quatro limites: fila inicial /
+          coluna inicial / fila final / coluna final. Nas colunas que definiste, -1 indica o último
+          limite.
+        </p>
+        <ol>
+          <li>Empilha os blocos</li>
+          <li>Estende o turno de uma ponta à outra</li>
+          <li>Distribui os estados por duas colunas</li>
+          <li>Coloca os três estados lado a lado</li>
+          <li>Faz avançar o pedido #23</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: os três estados estão empilhados; o pedido #23 aparece
+              no fim de Em preparação.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: Em espera e Em preparação partilham a segunda fila;
+              Prontas usa as duas colunas da terceira.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: os três estados partilham uma fila; o turno continua
+              a atravessar as três colunas.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>
+          Testa como o alinhamento vertical muda a apresentação: faz os três estados parecerem
+          painéis de igual altura no formato largo.
+        </p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>

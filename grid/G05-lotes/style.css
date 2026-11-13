@@ -1,0 +1,115 @@
+/* G05 · Catálogo de lotes
+ * Objetivo: Monta um catálogo de cinco lotes que ganhe colunas sozinho quando houver
+ * espaço, sem @media. Os preços de cartões na mesma fila devem ficar alinhados, mesmo
+ * quando uma descrição tem mais texto.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Prevê quantos cartões cabem
+ * Onde começar: .g05 .lotes
+ *
+ *   1. Abre o modo responsivo a 768 px. No inspetor, seleciona .lotes e lê a largura
+ *      útil do catálogo. Não escrevas CSS ainda.
+ *   2. Calcula o espaço de três cartões: três vezes 240 px e mais dois intervalos de 16
+ *      px.
+ *   3. Compara a soma com a largura que mediste. Anota quantos esperas ver na primeira
+ *      fila.
+ *
+ * Confirma: Três cartões precisam de 752 px. Se a área medida for 728 px, só cabem
+ * dois. Nesta etapa é uma previsão: os cartões ainda não mudaram de posição.
+ * Se precisares de uma pista: A largura da janela inclui as margens laterais da ficha.
+ * Mede o catálogo, não o ecrã.
+ */
+/* Nesta etapa não precisas de escrever CSS. */
+
+
+/* ETAPA 2 — Cria colunas sem @media
+ * Onde começar: .g05 .lotes
+ *
+ *   1. No CSS, transforma .lotes numa grelha, com 16 px entre cartões. Não uses @media.
+ *   2. Em repeat, usa auto-fill para repetir as colunas que couberem.
+ *   3. Define os limites de cada coluna com minmax: mínimo de 240 px, máximo de 1fr. No
+ *      mínimo, usa min(100%, 240px) para o cartão caber também num espaço mais
+ *      estreito.
+ *
+ * Confirma: Com os cinco lotes, a primeira fila tem um cartão a 390 px, dois a 768 px e
+ * quatro a 1100 px.
+ * Se precisares de uma pista: Lê de dentro para fora: min escolhe o menor valor; minmax
+ * dá os limites; repeat repete a coluna.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Alinha os preços no fundo
+ * Onde começar: .g05 .lotes > article
+ *
+ *   1. No HTML, vê os quatro filhos de cada article: etiqueta, nome, descrição e preço.
+ *   2. No CSS, transforma o article numa grelha de quatro filas com 8 px entre elas.
+ *   3. Dá o espaço livre à terceira fila (descrição). As outras três ajustam-se ao
+ *      conteúdo.
+ *   4. Retira as margens dos títulos e parágrafos dos cartões.
+ *
+ * Confirma: A 768 px, compara os dois cartões da primeira fila: os preços terminam à
+ * mesma altura. O espaço livre fica na fila da descrição.
+ * Se precisares de uma pista: Lê grid-template-rows de cima para baixo. A descrição
+ * recebe 1fr; as outras filas recebem auto.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Experimenta um texto maior
+ * Onde começar: .g05 .tag, .g05 .preco; HTML: descrição de Serra Clara
+ *
+ *   1. No CSS, põe a etiqueta de origem no início da sua célula, no alto à esquerda.
+ *      Realça o preço a negrito e alinha-o pelo fundo.
+ *   2. No HTML, acrescenta à descrição de Serra Clara: «No final da prova, notam-se a
+ *      amêndoa torrada e uma doçura suave.».
+ *   3. Guarda e mantém essa frase; testa a página a 768 px.
+ *
+ * Confirma: O primeiro cartão tem uma descrição maior. O preço continua alinhado com o
+ * do segundo cartão, sem texto sobreposto.
+ * Se precisares de uma pista: justify-self posiciona a etiqueta na horizontal;
+ * align-self controla a posição vertical na respetiva célula.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Compara duas e cinco embalagens
+ * Onde começar: .g05 .lotes; inspetor: os três últimos article
+ *
+ *   1. A 1100 px, só no inspetor, apaga os três últimos article. Não os apagues do HTML
+ *      nem atualizes a página já.
+ *   2. Com dois lotes, observa o espaço livre à direita com auto-fill. No inspetor,
+ *      muda só esse nome para auto-fit.
+ *   3. Compara as larguras. No ficheiro style.css, guarda a escolha auto-fit.
+ *   4. Atualiza a página para recuperar os cinco lotes. Mantém a descrição mais
+ *      comprida de Serra Clara.
+ *
+ * Confirma: No teste com dois lotes, só auto-fit os alarga até ocupar toda a fila.
+ * Depois de atualizares, voltas a ter quatro cartões na primeira fila e o quinto por
+ * baixo.
+ * Se precisares de uma pista: As alterações que fazes no inspetor desaparecem ao
+ * atualizar; as que guardas no editor ficam no ficheiro.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * Coluna: mínimo de 240 px, ou a largura disponível se for menor. 16 px entre cartões;
+ * 8 px entre as quatro filas de cada cartão.
+ * Sem @media. O número de colunas depende da largura útil do catálogo, do mínimo do
+ * cartão e do intervalo.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

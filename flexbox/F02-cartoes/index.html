@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>F02 · Cartões de produtos</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-flex">
+    <!-- Ficha F02: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Flexbox / F02</p>
+        <h1>Cartões de produtos</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> Apresenta quatro produtos em cartões. Quando já não houver
+          espaço, o cartão seguinte passa para a fila de baixo. Em cada fila, os preços devem
+          terminar à mesma altura.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                Cada cartão parte de <strong>272 px</strong> e tem pelo menos <strong>192
+                px</strong> de altura. Entre cartões: <strong>16 px</strong>. Dentro do cartão:
+                <strong>12 px</strong>.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Sem @media. Quando o cartão seguinte e o intervalo de <strong>16 px</strong> não
+                cabem, começa outra fila.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                <strong>390 px</strong>: um cartão por fila. <strong>768 px</strong>: 2 + 2.
+                <strong>1100 px</strong>: 3 + 1; o último ocupa a fila inteira.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Cartões de produtos</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO F02 | Classe do elemento que contém o exercício: f02. -->
+
+        <section class="f02" aria-labelledby="f02-titulo">
+          <h2 id="f02-titulo">Montra do café</h2>
+          <ul class="produtos">
+            <li class="produto box">
+              <h3>Café curto</h3>
+              <p>Um café acabado de tirar.</p>
+              <p class="rodape">
+                <span>Bebida</span>
+                <strong>1,20 €</strong>
+              </p>
+            </li>
+            <li class="produto box">
+              <h3>Sandes de queijo</h3>
+              <p>
+                Pão de mistura, queijo fresco, tomate e orégãos. Preparada no momento, com a opção
+                de retirar o tomate.
+              </p>
+              <p class="rodape">
+                <span>Salgado</span>
+                <strong>3,50 €</strong>
+              </p>
+            </li>
+            <li class="produto box">
+              <h3>Bolo de limão</h3>
+              <p>Uma fatia do bolo da casa.</p>
+              <p class="rodape">
+                <span>Doce</span>
+                <strong>2,00 €</strong>
+              </p>
+            </li>
+            <li class="produto box">
+              <h3>Sumo de laranja</h3>
+              <p>Espremido na hora.</p>
+              <p class="rodape">
+                <span>Bebida</span>
+                <strong>2,50 €</strong>
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO F02 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p>
+          <strong>Já conheces:</strong> Listas e cartões em HTML; margens, altura mínima e
+          espaçamento.
+        </p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> Lê flex: 1 1 272px assim: pode crescer, pode
+          encolher, parte de 272 px. Numa coluna, margin-top: auto ocupa a altura livre acima do
+          rodapé.
+        </p>
+        <ol>
+          <li>Prepara a lista de quatro produtos</li>
+          <li>Define a largura de partida</li>
+          <li>Empilha o conteúdo de cada cartão</li>
+          <li>Leva os preços para a base</li>
+          <li>Alonga uma descrição e repõe o texto</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: o sumo ocupa a segunda fila inteira; os outros três
+              cartões partilham a primeira.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: há duas filas de dois. Quando alongas a descrição da
+              sandes, o café da mesma fila acompanha a altura.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: há quatro filas. Consegues ler os quatro preços sem
+              arrastar a página para os lados.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>
+          Garante que a última fila não se estica para preencher todo o espaço. O que muda na
+          primeira fila?
+        </p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>

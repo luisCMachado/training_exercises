@@ -1,0 +1,107 @@
+/* G01 · Ementa por categorias
+ * Objetivo: Faz uma ementa com uma categoria por fila no telemóvel e três por fila no
+ * computador. Em cada categoria, o nome fica à esquerda e o preço à direita, mesmo que
+ * o nome ocupe duas linhas.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Empilha as quatro categorias
+ * Onde começar: .g01 .categorias
+ *
+ *   1. No HTML, encontra .categorias. Conta as quatro secções de categoria dentro deste
+ *      elemento.
+ *   2. No CSS, transforma .categorias numa grelha de uma coluna.
+ *   3. Deixa 16 px entre as categorias e observa a página a 390 px.
+ *
+ * Confirma: Vês quatro cartões em coluna, de Bebidas quentes a Pastelaria, com espaço
+ * entre eles. O título da ementa está fora da grelha.
+ * Se precisares de uma pista: Aplica display ao pai. O espaço entre os seus filhos é o
+ * gap.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Põe o preço ao lado do nome
+ * Onde começar: .g01 dl > div
+ *
+ *   1. No HTML, encontra o produto Expresso: dt é o nome, dd é o preço e os dois têm o
+ *      mesmo div como pai.
+ *   2. Transforma esse tipo de div numa grelha de duas colunas. A primeira recebe o
+ *      espaço livre; a segunda ajusta-se ao preço.
+ *   3. Separa as colunas por 8 px e alinha os dois elementos pelo topo.
+ *
+ * Confirma: «Expresso» e «1,20 €» já aparecem lado a lado. O recuo que o navegador dá
+ * aos preços será tratado na etapa 3.
+ * Se precisares de uma pista: No valor de grid-template-columns, lê as colunas da
+ * esquerda para a direita: primeiro 1fr, depois auto.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Alinha os preços
+ * Onde começar: .g01 dl, .g01 dt, .g01 dd
+ *
+ *   1. Retira a margem de dl e de dd. Faz de cada dl uma grelha de uma coluna, com 10
+ *      px entre produtos.
+ *   2. Em dd, encosta o texto à direita e evita que o número se separe do símbolo €.
+ *   3. Permite que um nome demasiado comprido quebre dentro de dt.
+ *
+ * Confirma: Os preços das duas bebidas quentes acabam no mesmo alinhamento à direita; o
+ * símbolo € fica na mesma linha do valor.
+ * Se precisares de uma pista: Para o texto: text-align alinha; white-space controla
+ * quebras; overflow-wrap ajuda com palavras compridas.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Passa para duas e três colunas
+ * Onde começar: .g01 .categorias
+ *
+ *   1. Cria uma regra a partir de 640 px: dá a .categorias duas colunas iguais.
+ *   2. A seguir, cria outra regra a partir de 1000 px: passa para três colunas iguais.
+ *      Usa repeat para as repetir.
+ *   3. Mantém como está a grelha de cada par nome/preço.
+ *
+ * Confirma: A 768 px há duas categorias por fila. A 1100 px há três na primeira fila e
+ * apenas Pastelaria na segunda.
+ * Se precisares de uma pista: Usa min-width. A regra mais larga vem depois, pois ambas
+ * se aplicam a 1100 px.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Acrescenta uma categoria
+ * Onde começar: HTML: última section dentro de .categorias
+ *
+ *   1. No HTML, duplica a última secção dentro de .categorias e dá à cópia o título
+ *      «Sopas».
+ *   2. Na cópia, troca o primeiro produto por «Creme de abóbora com sementes tostadas»,
+ *      a 2,80 €.
+ *   3. Troca o segundo por «Caldo-verde», a 2,50 €. Guarda; deixa a nova categoria no
+ *      HTML.
+ *
+ * Confirma: A 1100 px, Sopas fica na segunda fila, ao lado de Pastelaria, sem escrever
+ * mais CSS. A 390 px é o quinto cartão.
+ */
+/* Nesta etapa não precisas de escrever CSS. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * 16 px entre categorias; 10 px entre produtos de uma categoria; 8 px entre nome e
+ * preço. O preço só ocupa a largura necessária.
+ * Base: 1 coluna. A partir de 640 px: 2 colunas. A partir de 1000 px: 3 colunas. Os
+ * limites estão incluídos.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

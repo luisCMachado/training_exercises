@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>F04 · Balcões de serviço</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-flex">
+    <!-- Ficha F04: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Flexbox / F04</p>
+        <h1>Balcões de serviço</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> Mostra os balcões Recolha e Preparação lado a lado. Os dois
+          começam com a mesma largura. Quando a janela crescer, a Preparação ganha mais espaço;
+          quando encolher, perde mais. No telemóvel, ficam empilhados.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                Conjunto: máximo <strong>896 px</strong>. Cada balcão parte de <strong>384
+                px</strong>. Entre balcões: <strong>16 px</strong>; dentro de cada um: <strong>12
+                px</strong>. Largura de partida do conjunto: <strong>784 px</strong>.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Até <strong>640 px</strong> inclusive: balcões em coluna, sem base fixa. Acima de
+                <strong>640 px</strong>: lado a lado, com crescimento ou redução.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                <strong>390 px</strong>: Recolha acima de Preparação. <strong>768 px</strong>:
+                Preparação mais estreita. <strong>1100 px</strong>: Preparação mais larga.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Balcões de serviço</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO F04 | Classe do elemento que contém o exercício: f04. -->
+
+        <section class="f04" aria-labelledby="f04-titulo">
+          <h2 id="f04-titulo">Balcões de serviço</h2>
+          <div class="frente">
+            <article class="balcao recolha box">
+              <h3>Recolha</h3>
+              <p>Confere o número e recebe o pedido.</p>
+              <p class="posto tag">Posto A</p>
+            </article>
+
+            <article class="balcao preparacao box">
+              <h3>Preparação</h3>
+              <p>Mói o café, aquece o leite e prepara a bandeja.</p>
+              <p class="posto tag">Posto B</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO F04 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p><strong>Já conheces:</strong> Larguras em píxeis, largura máxima e media queries.</p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> flex-basis é o ponto de partida. flex-grow reparte
+          o que sobra; flex-shrink reparte o que falta. Mede a diferença até à base, não só o
+          tamanho final.
+        </p>
+        <ol>
+          <li>Prepara os dois balcões</li>
+          <li>Dá-lhes a mesma base</li>
+          <li>Divide o espaço que sobra</li>
+          <li>Divide o espaço que falta</li>
+          <li>Empilha e atualiza o posto A</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: no inspetor, compara as larguras com a base. A
+              Preparação ganha mais do que a Recolha.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: com a base de 384 px e um intervalo de 16 px, a
+              Preparação perde mais que a Recolha.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: cada balcão ocupa a largura disponível. Lê-se primeiro
+              a Recolha, com a nova instrução.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>Mantém as duas bases, troca apenas os fatores de redução e repete a medição a 768 px.</p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>

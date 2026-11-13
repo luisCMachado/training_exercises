@@ -1,0 +1,107 @@
+/* G04 · Página da revista do café
+ * Objetivo: Organiza os quatro blocos de uma revista. No telemóvel, lê-se cabeçalho,
+ * reportagem, agenda e ficha editorial. No computador, a reportagem fica à esquerda; a
+ * agenda e a ficha ficam empilhadas à direita.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Desenha a página em três larguras
+ * Onde começar: .g04
+ *
+ *   1. No HTML, encontra os quatro filhos de .g04: cabeçalho, capa, agenda e ficha.
+ *      Nesta etapa, usa papel; não alteres o CSS.
+ *   2. Desenha o telemóvel (390 px): quatro caixas empilhadas.
+ *   3. Desenha a largura intermédia (768 px): cabeçalho e capa em largura total; agenda
+ *      e ficha lado a lado.
+ *   4. Desenha o computador (1100 px): cabeçalho em largura total, capa à esquerda,
+ *      agenda por cima da ficha à direita.
+ *
+ * Confirma: Cada desenho tem quatro blocos e uma só reportagem. No desenho largo, a
+ * capa toca nas duas filas da coluna lateral.
+ */
+/* Nesta etapa não precisas de escrever CSS. */
+
+
+/* ETAPA 2 — Cria o primeiro mapa
+ * Onde começar: .g04 e os quatro filhos diretos
+ *
+ *   1. Na regra de .g04, cria uma grelha de uma coluna com 16 px entre os blocos.
+ *   2. Faz o mapa de uma coluna: uma fila para topo, outra para capa, outra para agenda
+ *      e outra para ficha.
+ *   3. Nos filhos, liga .cabecalho ao nome topo; liga os outros três aos nomes
+ *      correspondentes.
+ *
+ * Confirma: A 390 px, a revista tem quatro blocos em coluna com espaço entre eles. No
+ * inspetor Grid, o cabeçalho ocupa a área chamada topo.
+ * Se precisares de uma pista: No pai, cada linha de grid-template-areas vai entre
+ * aspas. No filho, grid-area usa o nome sem aspas.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Partilha a última fila
+ * Onde começar: .g04
+ *
+ *   1. A partir de 640 px, dá à grelha .g04 duas colunas iguais.
+ *   2. Refaz o mapa com dois nomes por fila: repete topo na primeira fila e capa na
+ *      segunda.
+ *   3. Na terceira fila, reserva a célula esquerda para agenda e a direita para ficha.
+ *
+ * Confirma: A 768 px, o cabeçalho e a reportagem atravessam as duas colunas. A agenda e
+ * a ficha estão lado a lado, abaixo da reportagem.
+ * Se precisares de uma pista: Dois nomes iguais lado a lado alargam a área de um mesmo
+ * bloco; não criam duas cópias do HTML.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Abre uma coluna lateral
+ * Onde começar: .g04
+ *
+ *   1. A seguir, cria a regra a partir de 1000 px: reparte as colunas em duas partes à
+ *      esquerda e uma à direita.
+ *   2. Mantém topo nas duas células da primeira fila.
+ *   3. Nas duas filas seguintes, repete capa à esquerda. À direita, coloca agenda na
+ *      segunda fila e ficha na terceira.
+ *
+ * Confirma: A 1100 px, a capa é um retângulo que ocupa duas filas. A coluna da agenda e
+ * da ficha é mais estreita e fica à direita.
+ * Se precisares de uma pista: Usa fr para a proporção entre as colunas. Mantém o mesmo
+ * nome de área nas duas células da capa.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Prolonga a agenda
+ * Onde começar: HTML: ul dentro de .agenda
+ *
+ *   1. No HTML, acrescenta ao fim da lista da agenda um li com «Dia 22: oficina de
+ *      massa-mãe».
+ *   2. Acrescenta outro li com «Dia 28: conversa sobre cereais e farinhas das padarias
+ *      do bairro».
+ *   3. Mantém os quatro eventos e testa a página a 390, 768 e 1100 px.
+ *
+ * Confirma: Os dias 22 e 28 aparecem uma só vez. O último evento continua legível sem
+ * ficar tapado pela ficha editorial.
+ */
+/* Nesta etapa não precisas de escrever CSS. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * 16 px entre áreas. Formato intermédio: 2 colunas iguais. Formato largo: proporção 2fr
+ * para a reportagem e 1fr para a coluna lateral.
+ * Base: 1 coluna. A partir de 640 px: agenda e ficha lado a lado. A partir de 1000 px:
+ * ambas à direita da reportagem.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

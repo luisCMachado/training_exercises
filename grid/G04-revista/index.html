@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>G04 · Página da revista do café</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-grid">
+    <!-- Ficha G04: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Grid / G04</p>
+        <h1>Página da revista do café</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> Organiza os quatro blocos de uma revista. No telemóvel, lê-se
+          cabeçalho, reportagem, agenda e ficha editorial. No computador, a reportagem fica à
+          esquerda; a agenda e a ficha ficam empilhadas à direita.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                <strong>16 px</strong> entre áreas. Formato intermédio: 2 colunas iguais. Formato
+                largo: proporção 2fr para a reportagem e 1fr para a coluna lateral.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Base: 1 coluna. A partir de <strong>640 px</strong>: agenda e ficha lado a lado. A
+                partir de <strong>1000 px</strong>: ambas à direita da reportagem.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                <strong>390 px</strong>: quatro blocos em coluna. <strong>768 px</strong>: agenda e
+                ficha na última fila. <strong>1100 px</strong>: agenda acima da ficha.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Página da revista do café</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO G04 | Classe do elemento que contém o exercício: g04. -->
+
+        <section class="g04" aria-labelledby="g04-titulo">
+          <header class="cabecalho box">
+            <p class="tag">Edição de maio</p>
+            <h2 id="g04-titulo">A revista do café</h2>
+          </header>
+
+          <article class="capa box">
+            <h3>O padeiro da rua de cima</h3>
+            <p>Às seis da manhã, a primeira fornada já perfuma a rua.</p>
+            <p>Fomos à padaria conhecer quem prepara o pão das nossas tostas.</p>
+          </article>
+
+          <aside class="agenda box" aria-labelledby="g04-agenda">
+            <h3 id="g04-agenda">Agenda</h3>
+            <ul>
+              <li>Dia 8: prova de pão</li>
+              <li>Dia 19: conversa com o padeiro</li>
+            </ul>
+          </aside>
+
+          <footer class="ficha box">
+            <h3>Ficha editorial</h3>
+            <p>Textos: turma da manhã. Edição: equipa do café.</p>
+          </footer>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO G04 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p>
+          <strong>Já conheces:</strong> Colunas iguais ou em proporção 2fr / 1fr; intervalos; dois
+          pontos de mudança com @media.
+        </p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> Um mapa de áreas atribui nomes a posições. Em
+          grid-template-areas, cada par de aspas representa uma fila; grid-area liga o bloco ao
+          nome.
+        </p>
+        <ol>
+          <li>Desenha a página em três larguras</li>
+          <li>Cria o primeiro mapa</li>
+          <li>Partilha a última fila</li>
+          <li>Abre uma coluna lateral</li>
+          <li>Prolonga a agenda</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: cabeçalho, capa, agenda e ficha, um bloco por fila.
+              Não há texto duplicado.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: agenda à esquerda da ficha, ambas abaixo da
+              reportagem.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: agenda e ficha à direita da reportagem; os quatro
+              eventos e a ficha são legíveis.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>
+          Só no formato intermédio, dá duas partes da largura à agenda e uma à ficha. Mantém o mapa
+          de áreas.
+        </p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>

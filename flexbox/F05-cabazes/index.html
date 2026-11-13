@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>F05 · Seleção de cabazes</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-flex">
+    <!-- Ficha F05: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Flexbox / F05</p>
+        <h1>Seleção de cabazes</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> Apresenta três cabazes e uma nota de recolha ao lado. Em cada
+          opção, põe o círculo à esquerda, o nome e a descrição ao centro e o preço à direita. No
+          telemóvel, a nota passa para baixo.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                Bases dos painéis: <strong>400 px</strong> e <strong>176 px</strong>; entre eles:
+                <strong>16 px</strong>. Cada opção: altura mínima <strong>56 px</strong>, espaço
+                interior <strong>8 px</strong>, intervalo interno <strong>12 px</strong>. Entre
+                opções: <strong>8 px</strong>.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Sem @media. Se as duas bases e o intervalo não couberem, o painel da nota passa para
+                baixo.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                <strong>390 px</strong>: nota por baixo das opções. 768 e <strong>1100 px</strong>:
+                nota à direita. O texto pode quebrar; o preço fica inteiro.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Seleção de cabazes</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO F05 | Classe do elemento que contém o exercício: f05. -->
+
+        <section class="f05" aria-labelledby="f05-titulo">
+          <h2 id="f05-titulo">Escolhe um cabaz</h2>
+          <div class="paineis">
+            <fieldset class="escolha box">
+              <legend>Um cabaz por pessoa</legend>
+              <div class="opcoes">
+                <label class="opcao">
+                  <input type="radio" name="f05-cabaz" checked>
+                  <span class="texto">
+                    <strong>Pausa curta</strong>
+                    <span>Um café e uma fatia de bolo.</span>
+                  </span>
+                  <span class="preco">3,20 €</span>
+                </label>
+                <label class="opcao">
+                  <input type="radio" name="f05-cabaz">
+                  <span class="texto">
+                    <strong>Almoço leve</strong>
+                    <span>Uma sandes e um sumo da estação.</span>
+                  </span>
+                  <span class="preco">5,50 €</span>
+                </label>
+                <label class="opcao">
+                  <input type="radio" name="f05-cabaz">
+                  <span class="texto">
+                    <strong>Para partilhar</strong>
+                    <span>Dois chás e duas fatias de bolo.</span>
+                  </span>
+                  <span class="preco">7,00 €</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <aside class="guia box">
+              <h3>Recolha</h3>
+              <p>Indica o nome do cabaz no balcão até às 16h.</p>
+            </aside>
+          </div>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO F05 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p>
+          <strong>Já conheces:</strong> Classes, bordas e espaçamento; leitura da relação entre pai
+          e filhos.
+        </p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> As opções de escolha e as respetivas etiquetas já
+          estão no HTML. Organiza-as com Flexbox; não precisas de programar o clique ou o teclado.
+        </p>
+        <ol>
+          <li>Coloca a escolha ao lado da nota</li>
+          <li>Agrupa as três opções</li>
+          <li>Alinha círculo, texto e preço</li>
+          <li>Torna a linha fácil de selecionar</li>
+          <li>Testa uma descrição mais comprida</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: os três preços terminam à direita; a nota de recolha
+              é mais baixa do que o painel dos cabazes.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: a nota fica ao lado. A nova descrição de Almoço leve
+              não tapa o preço.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: a nota passa para baixo. Clica na terceira opção e usa
+              a seta para cima para selecionar a segunda.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>
+          Só como experiência, realça a opção enquanto o seu círculo tem o foco do teclado. Ao sair
+          do grupo, o realce extra deve desaparecer.
+        </p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>

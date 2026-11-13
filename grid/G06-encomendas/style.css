@@ -1,0 +1,109 @@
+/* G06 · Painel de encomendas
+ * Objetivo: Constrói o painel do balcão: o turno ocupa sempre a faixa de cima. No
+ * telemóvel, os três estados das encomendas ficam empilhados; no computador, ficam lado
+ * a lado. Depois faz avançar um pedido de um estado para outro.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Empilha os blocos
+ * Onde começar: .g06 .quadro
+ *
+ *   1. No HTML, identifica os quatro filhos de .quadro: o turno e os três estados das
+ *      encomendas.
+ *   2. No CSS, ativa Grid em .quadro. Começa com uma coluna e deixa 16 px entre blocos.
+ *   3. Alinha os blocos pelo topo e conserva a ordem do HTML.
+ *
+ * Confirma: A 390 px, o turno está primeiro e o pedido #17 aparece no último grupo. Os
+ * quatro blocos estão separados por intervalos.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Estende o turno de uma ponta à outra
+ * Onde começar: .g06 .turno
+ *
+ *   1. Seleciona .turno e retira a margem do parágrafo.
+ *   2. Com grid-area, coloca o turno na primeira fila: começa na linha 1 e termina na
+ *      linha 2 das filas.
+ *   3. Nas colunas, começa na primeira linha e termina na última, indicada por -1.
+ *
+ * Confirma: O turno ocupa sozinho a primeira fila. Como só há uma coluna, a faixa pode
+ * parecer igual; no inspetor podes confirmar a posição. O efeito na largura vê-se na
+ * etapa 3.
+ * Se precisares de uma pista: A ordem de grid-area é: fila inicial, coluna inicial,
+ * fila final, coluna final. Entre quatro limites, usa barras.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Distribui os estados por duas colunas
+ * Onde começar: .g06 .quadro, .g06 .prontas
+ *
+ *   1. A partir de 640 px, cria duas colunas iguais no pai .quadro.
+ *   2. Deixa «Em espera» e «Em preparação» entrarem pela ordem do HTML.
+ *   3. Só em .prontas, fixa a terceira fila, ocupando ambas as colunas do início ao
+ *      fim.
+ *
+ * Confirma: A 768 px, o turno atravessa as duas colunas. Os dois primeiros estados
+ * partilham a fila do meio; «Prontas a levantar» ocupa toda a terceira fila.
+ * Se precisares de uma pista: Uma terceira fila começa na linha 3 e termina na linha 4.
+ * -1 continua a significar a última linha da grelha explícita nesse eixo.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Coloca os três estados lado a lado
+ * Onde começar: .g06 .quadro, .g06 .prontas
+ *
+ *   1. Depois da regra anterior, cria a regra a partir de 1000 px. Aumenta o número de
+ *      colunas do painel para três.
+ *   2. Nessa mesma regra, em .prontas, volta a pôr grid-area no modo automático.
+ *
+ * Confirma: A 1100 px, os três estados ficam lado a lado, com «Prontas a levantar» à
+ * direita. O turno continua a ocupar a primeira fila por inteiro.
+ * Se precisares de uma pista: Se Prontas ficar sozinha em baixo, confirma que anulaste
+ * a posição explícita da etapa 3 com auto.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Faz avançar o pedido #23
+ * Onde começar: .g06 .quadro ol; HTML: listas de Em espera e Em preparação
+ *
+ *   1. No CSS, põe os pedidos de cada ol numa grelha vertical com 8 px de intervalo.
+ *      Retira margem, recuo e marcadores da lista.
+ *   2. Dá a cada li um fundo claro e 8 px de espaço interior; permite que uma palavra
+ *      longa quebre.
+ *   3. No HTML, acrescenta a «Em espera» um li com «#23 Três sandes de pasta de grão e
+ *      hortelã». Guarda e vê o novo pedido.
+ *   4. Recorta o mesmo li e cola-o no fim de «Em preparação». Guarda essa mudança para
+ *      a entrega.
+ *
+ * Confirma: O #23 aparece uma só vez: no fim de «Em preparação». Ficam dois pedidos em
+ * espera, três em preparação e um pronto.
+ * Se precisares de uma pista: Mover é recortar e colar. Se copiares sem retirar o
+ * original, o pedido ficará em dois estados.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * 16 px entre os blocos do painel; 8 px entre pedidos e 8 px de espaço interior em cada
+ * pedido. O turno ocupa sempre a largura inteira.
+ * Base: 1 coluna. A partir de 640 px: 2 colunas. A partir de 1000 px: 3 colunas. Os
+ * limites estão incluídos.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

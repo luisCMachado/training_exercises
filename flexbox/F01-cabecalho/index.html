@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>F01 · Cabeçalho e ementa rápida</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-flex">
+    <!-- Ficha F01: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Flexbox / F01</p>
+        <h1>Cabeçalho e ementa rápida</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> No computador, mostra o nome do café à esquerda e três atalhos
+          à direita. No telemóvel, põe os atalhos uns por baixo dos outros. Em ambos, cada produto
+          tem o preço à direita.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                Cabeçalho: altura mínima <strong>112 px</strong>; intervalo entre grupos <strong>16
+                px</strong>. Atalhos e produtos: <strong>8 px</strong> entre itens. Nome e preço:
+                intervalo mínimo <strong>16 px</strong>.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Até <strong>640 px</strong> inclusive: cabeçalho e atalhos em coluna. Acima de
+                <strong>640 px</strong>: em fila.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                <strong>390 px</strong>: três atalhos empilhados. 768 e <strong>1100 px</strong>:
+                três atalhos na mesma fila.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Cabeçalho e ementa rápida</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO F01 | Classe do elemento que contém o exercício: f01. -->
+
+        <section class="f01" aria-labelledby="f01-titulo">
+          <header class="cab box">
+            <div class="marca">
+              <p>Café da turma</p>
+              <h2 id="f01-titulo">Ementa rápida</h2>
+            </div>
+
+            <nav aria-label="Categorias da ementa">
+              <ul class="atalhos">
+                <li>
+                  <a class="btn" href="#f01-bebidas">Bebidas</a>
+                </li>
+                <li>
+                  <a class="btn" href="#f01-sandes">Sandes</a>
+                </li>
+                <li>
+                  <a class="btn" href="#f01-doces">Doces</a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <ul class="ementa">
+            <li class="linha box" id="f01-bebidas">
+              <span>Bebidas · Chá de limão</span>
+              <strong>1,20 €</strong>
+            </li>
+            <li class="linha box" id="f01-sandes">
+              <span>Sandes · Queijo fresco</span>
+              <strong>3,50 €</strong>
+            </li>
+            <li class="linha box" id="f01-doces">
+              <span>Doces · Bolo do dia</span>
+              <strong>2,00 €</strong>
+            </li>
+          </ul>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO F01 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p>
+          <strong>Já conheces:</strong> Classes, listas e ligações a um ID; margens e media queries.
+        </p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> Um pai organiza os seus filhos diretos: a marca e
+          a navegação precisam de uma fila; os três atalhos precisam de outra.
+        </p>
+        <ol>
+          <li>Separa a marca dos atalhos</li>
+          <li>Põe os três atalhos numa fila</li>
+          <li>Alinha os preços</li>
+          <li>Empilha a navegação no telemóvel</li>
+          <li>Testa os destinos e atualiza um produto</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: marca à esquerda, três atalhos à direita, preços
+              alinhados na ementa.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: os três atalhos cabem na mesma fila e não tapam o nome
+              do café.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: os atalhos ocupam três linhas. Tab e Enter abrem a
+              secção indicada por cada ligação.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>Destaca durante o teste a linha de ementa cujo atalho foi ativado.</p>
+      </details>
+
+      <details class="lab-section lab-extra">
+        <summary>Para a discussão final: Distribuição no eixo principal</summary>
+        <p>
+          No cabeçalho largo, mantém o mesmo intervalo mínimo. Compara encostar os dois grupos ao
+          fim, centrá-los e repartir o espaço à volta de cada um. Observa o espaço nas extremidades.
+        </p>
+        <p>Faz a experiência no inspetor e repõe as regras no fim.</p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>

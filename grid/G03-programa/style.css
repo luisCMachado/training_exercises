@@ -1,0 +1,107 @@
+/* G03 · Programa semanal
+ * Objetivo: Organiza a agenda de três dias. No telemóvel lê-se um dia e depois as suas
+ * sessões, de cima para baixo. No computador, cada dia fica à esquerda e as sessões
+ * desse dia aparecem lado a lado.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Separa os três dias
+ * Onde começar: .g03 .semana, .g03 .dia
+ *
+ *   1. No HTML, distingue o grupo dos três dias (.semana) do bloco de um só dia (.dia).
+ *   2. Transforma .semana numa grelha com um dia por fila e 14 px entre dias.
+ *   3. Transforma cada .dia numa grelha de uma coluna. Dá 12 px de intervalo entre o
+ *      título e a lista; retira a margem do título.
+ *
+ * Confirma: A 390 px, «Terça-feira» está acima da sua lista. «Quinta-feira» só aparece
+ * depois das duas sessões de terça.
+ * Se precisares de uma pista: São dois pais diferentes. O gap de .semana não separa o
+ * título da lista dentro de cada dia.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Empilha as sessões de cada dia
+ * Onde começar: .g03 .sessoes, .g03 .sessoes li
+ *
+ *   1. Em .sessoes, ativa Grid para as sessões entrarem uma abaixo da outra. Deixa 10
+ *      px entre sessões.
+ *   2. Na lista, retira a margem, o recuo e a numeração automática.
+ *   3. Dá a cada li um fundo claro e 12 px de espaço interior. Permite que o texto
+ *      longo quebre.
+ *
+ * Confirma: Na terça, as 09h30 e as 16h00 aparecem em duas caixas separadas em altura.
+ * O texto está afastado da borda e não há 1. ou 2. antes das horas.
+ * Se precisares de uma pista: gap separa as caixas; padding afasta o texto da borda de
+ * cada caixa.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Alinha o nome de cada dia
+ * Onde começar: .g03 .dia
+ *
+ *   1. Cria uma regra a partir de 640 px para o elemento .dia.
+ *   2. Reserva 128 px à primeira coluna, para o nome do dia. A lista recebe o restante
+ *      espaço na segunda.
+ *   3. Alinha o título pelo topo, junto à primeira sessão.
+ *
+ * Confirma: A 768 px, os nomes dos dias ficam à esquerda. Todas as listas começam no
+ * mesmo alinhamento e as horas de cada dia continuam empilhadas.
+ * Se precisares de uma pista: Dá a largura fixa à primeira coluna e a unidade fr à
+ * segunda.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Põe as sessões lado a lado
+ * Onde começar: .g03 .sessoes
+ *
+ *   1. A partir de 1000 px, intervém na lista .sessoes, sem mudar a grelha exterior de
+ *      cada dia.
+ *   2. Define uma única fila e muda grid-auto-flow para que a sessão seguinte entre
+ *      numa nova coluna.
+ *   3. Faz com que as colunas criadas recebam partes iguais do espaço disponível.
+ *
+ * Confirma: A 1100 px, as 09h30 e as 16h00 de terça ficam na mesma fila e ocupam
+ * larguras iguais. A quinta continua num bloco separado.
+ * Se precisares de uma pista: grid-auto-flow escolhe a direção; grid-auto-columns
+ * dimensiona as colunas que vão surgindo.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Adiciona uma sessão na quinta
+ * Onde começar: HTML: último li da lista de quinta-feira
+ *
+ *   1. No HTML, duplica o li das 17h00 de quinta-feira, dentro da mesma lista.
+ *   2. Na cópia, muda a hora visível para 19h00, o atributo datetime para 19:00 e o
+ *      nome para «Conversas sobre o pão da nossa região».
+ *   3. Guarda e mantém a terceira sessão de quinta-feira. Não alteres a terça nem o
+ *      sábado.
+ *
+ * Confirma: A 1100 px, só quinta-feira tem três colunas de sessões. A 390 px, as 19h00
+ * aparecem debaixo das 17h00.
+ */
+/* Nesta etapa não precisas de escrever CSS. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * 14 px entre dias; 12 px entre o título do dia e a lista. Entre sessões: 10 px.
+ * Interior de cada sessão: 12 px. Coluna do dia a partir de 640 px: 128 px.
+ * Base: dia por cima da lista. A partir de 640 px: dia à esquerda. A partir de 1000 px:
+ * sessões de cada dia lado a lado.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

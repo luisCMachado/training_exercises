@@ -1,0 +1,106 @@
+/* F01 · Cabeçalho e ementa rápida
+ * Objetivo: No computador, mostra o nome do café à esquerda e três atalhos à direita.
+ * No telemóvel, põe os atalhos uns por baixo dos outros. Em ambos, cada produto tem o
+ * preço à direita.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Separa a marca dos atalhos
+ * Onde começar: .f01 .cab
+ *
+ *   1. No HTML, encontra .marca e nav. São irmãos dentro de .cab. No CSS, faz desse pai
+ *      uma fila Flexbox.
+ *   2. Deixa a marca à esquerda e a navegação à direita, com pelo menos 16 px de
+ *      intervalo.
+ *   3. Dá ao cabeçalho uma altura mínima de 112 px e centra os dois grupos na vertical.
+ *
+ * Confirma: A 1100 px, a marca está à esquerda e o grupo de atalhos à direita. Os
+ * atalhos ainda podem estar empilhados.
+ * Se precisares de uma pista: justify-content distribui os grupos ao longo da fila;
+ * align-items alinha-os na vertical.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Põe os três atalhos numa fila
+ * Onde começar: .f01 .atalhos e .f01 .ementa
+ *
+ *   1. Nas listas .atalhos e .ementa, retira os marcadores, o recuo e a margem.
+ *   2. Em .atalhos, põe os três itens em fila, com 8 px entre eles.
+ *   3. Permite que um item passe à fila seguinte se deixar de caber.
+ *
+ * Confirma: A 768 px, Bebidas, Sandes e Doces aparecem por esta ordem, lado a lado e
+ * sem marcadores.
+ * Se precisares de uma pista: A lista é o pai dos li. A regra aplicada a .cab não chega
+ * a estes netos.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Alinha os preços
+ * Onde começar: .f01 .ementa; .f01 .linha
+ *
+ *   1. Em .ementa, empilha os produtos com 8 px entre eles. Deixa 16 px acima da lista.
+ *   2. Em cada .linha, põe nome e preço nas duas pontas, centrados na vertical e com
+ *      pelo menos 16 px entre si.
+ *   3. No strong que contém o preço, impede a quebra de linha entre o número e o
+ *      símbolo do euro.
+ *
+ * Confirma: Em cada linha, o nome fica à esquerda. Os três preços terminam junto à
+ * mesma margem direita.
+ * Se precisares de uma pista: O preço está dentro de strong. white-space controla a
+ * quebra de linha do texto.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Empilha a navegação no telemóvel
+ * Onde começar: @media (max-width: 640px)
+ *
+ *   1. Cria uma media query para larguras até 640 px. Dentro dela, muda .cab de fila
+ *      para coluna.
+ *   2. Alinha os dois grupos no início da coluna e estica-os na largura. Muda também
+ *      .atalhos para coluna.
+ *   3. Faz cada ligação ocupar a largura do seu li, para poderes clicar fora das
+ *      letras.
+ *
+ * Confirma: A 390 px, os três atalhos ocupam linhas inteiras. A 768 px, voltam a ficar
+ * lado a lado.
+ * Se precisares de uma pista: Uma regra no cabeçalho muda a posição do nav inteiro.
+ * Para empilhar os atalhos, é preciso outra regra na lista.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Testa os destinos e atualiza um produto
+ * Onde começar: .f01 .atalhos a; #f01-doces no HTML
+ *
+ *   1. No HTML, encontra o produto com o ID f01-doces. Muda o nome para «Doces · Bolo
+ *      de cenoura» e o preço para 2,40 €. Conserva o ID.
+ *   2. No navegador, usa Tab para chegar a Sandes e Enter para seguir a ligação. Faz o
+ *      mesmo com Doces. Mantém a alteração no HTML.
+ *
+ * Confirma: O endereço termina em #f01-sandes no primeiro teste e em #f01-doces no
+ * segundo. A linha Doces mostra o novo produto.
+ */
+/* Nesta etapa não precisas de escrever CSS. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * Cabeçalho: altura mínima 112 px; intervalo entre grupos 16 px. Atalhos e produtos: 8
+ * px entre itens. Nome e preço: intervalo mínimo 16 px.
+ * Até 640 px inclusive: cabeçalho e atalhos em coluna. Acima de 640 px: em fila.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

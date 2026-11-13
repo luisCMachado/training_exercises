@@ -1,0 +1,105 @@
+/* G02 · Montra das especialidades
+ * Objetivo: Constrói uma montra de produtos. No telemóvel, todos os cartões ficam em
+ * coluna. No computador, a tarte ocupa o espaço de quatro cartões: duas colunas por
+ * duas filas, com o bolo e o chá à sua direita.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Começa por uma coluna
+ * Onde começar: .g02 .montra
+ *
+ *   1. No HTML, localiza os cinco article dentro de .montra. Aplica Grid ao elemento
+ *      que os contém.
+ *   2. Começa com uma coluna e 16 px de intervalo entre os cartões.
+ *   3. Dá às filas automáticas um mínimo de 112 px; deixa a altura crescer se o texto
+ *      precisar.
+ *
+ * Confirma: A 390 px, o bolo fica abaixo da tarte e há espaço entre os dois. No
+ * inspetor, cada fila tem pelo menos 112 px.
+ * Se precisares de uma pista: grid-auto-rows define a altura das novas filas; minmax
+ * permite dar-lhes um mínimo e um máximo.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Arruma o cartão da tarte
+ * Onde começar: .g02 .destaque
+ *
+ *   1. Transforma o cartão .destaque numa segunda grelha, dentro da montra.
+ *   2. Encosta o conteúdo ao topo e cada elemento ao início da sua célula.
+ *   3. Retira as margens dos três filhos e separa-os por 8 px.
+ *   4. Marca a margem esquerda da tarte com uma borda sólida de 6 px.
+ *
+ * Confirma: Só a tarte tem a borda de destaque. O fundo do selo acaba junto de
+ * «Especialidade da semana», em vez de preencher toda a largura.
+ * Se precisares de uma pista: align-content posiciona o conjunto das filas;
+ * justify-items posiciona os filhos na horizontal.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Dá toda a primeira fila à tarte
+ * Onde começar: .g02 .montra, .g02 .destaque
+ *
+ *   1. Na regra a partir de 640 px, cria duas colunas iguais no pai .montra.
+ *   2. No cartão .destaque, faz a tarte ocupar as duas colunas. Deixa o navegador
+ *      colocar os outros cartões.
+ *
+ * Confirma: A 768 px, a primeira fila tem apenas a tarte. A segunda tem bolo e chá lado
+ * a lado.
+ * Se precisares de uma pista: grid-column atua sobre o cartão. span indica quantas
+ * colunas ele ocupa.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Alarga a montra para três colunas
+ * Onde começar: .g02 .montra, .g02 .destaque
+ *
+ *   1. Abaixo da regra anterior, cria uma regra a partir de 1000 px. Dá três colunas
+ *      iguais à montra.
+ *   2. Mantém a largura da tarte em duas colunas. Faz o mesmo cartão ocupar também duas
+ *      filas.
+ *
+ * Confirma: A 1100 px, bolo e chá ficam à direita da tarte, um por cima do outro. A
+ * tosta começa a terceira fila.
+ * Se precisares de uma pista: Usa grid-row no cartão. Agora decides quantas filas, não
+ * quantas colunas, a tarte ocupa.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Acrescenta a sexta especialidade
+ * Onde começar: HTML: último article de .montra e descrição de .destaque
+ *
+ *   1. No HTML, duplica o último article da montra. Na cópia, escreve «Torrada de
+ *      centeio» e «Com manteiga.».
+ *   2. Acrescenta ao fim da descrição da tarte: «As peras assam lentamente antes de
+ *      entrarem na massa com a amêndoa.».
+ *   3. Guarda e mantém as duas alterações para a entrega.
+ *
+ * Confirma: A 1100 px, a terceira fila tem tosta, queijada e torrada. A descrição maior
+ * da tarte continua dentro do cartão.
+ */
+/* Nesta etapa não precisas de escrever CSS. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * 16 px entre cartões. Altura mínima de cada fila: 112 px. No destaque: 8 px entre os
+ * textos e borda esquerda de 6 px.
+ * Base: 1 coluna. A partir de 640 px: 2 colunas, tarte com largura dupla. A partir de
+ * 1000 px: 3 colunas, tarte também com altura de duas filas.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

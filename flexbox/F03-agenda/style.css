@@ -1,0 +1,101 @@
+/* F03 · Agenda de oficinas
+ * Objetivo: Em cada oficina, põe a hora no alto à esquerda, o resumo ao centro e as
+ * vagas em baixo à direita. No telemóvel, mostra esses três elementos por baixo uns dos
+ * outros.
+ * Abre index.html no navegador. Escreve o CSS fora dos comentários, no espaço de cada
+ * etapa. Guarda e atualiza a página após cada ação.
+ */
+
+/* ETAPA 1 — Mantém a ordem das sessões
+ * Onde começar: .f03 .agenda
+ *
+ *   1. No HTML, encontra o ol com a classe .agenda. Mantém essa lista e a sua ordem.
+ *   2. No CSS, empilha as três sessões com Flexbox e dá-lhes um intervalo de 16 px.
+ *   3. Retira a margem, o recuo e a numeração visível da lista.
+ *
+ * Confirma: Vês as três caixas separadas por 16 px e sem números à esquerda. As horas
+ * continuam na ordem 14h00, 15h30 e 17h00.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 2 — Centra o conteúdo de uma sessão
+ * Onde começar: .f03 .sessao
+ *
+ *   1. Em .sessao, põe hora, resumo e vagas numa fila com 16 px entre eles.
+ *   2. Dá à sessão uma altura mínima de 144 px. Centra os três filhos na vertical.
+ *
+ * Confirma: A 1100 px, os três elementos estão lado a lado e alinhados a meio da altura
+ * da caixa.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 3 — Reserva espaço para o resumo
+ * Onde começar: .f03 .sessao time; .f03 .resumo; .f03 .estado
+ *
+ *   1. No time, reserva 72 px para a hora e não deixes essa largura crescer nem
+ *      encolher.
+ *   2. No resumo, começa com 192 px e permite crescer e encolher. Retira as margens do
+ *      h3 e do p.
+ *   3. Na etiqueta .estado, reserva apenas a largura do seu texto, sem crescer nem
+ *      encolher.
+ *
+ * Confirma: A 1100 px, os três resumos começam à mesma distância da esquerda. Ao
+ * alargar a janela, o resumo ganha espaço e a hora mantém os 72 px.
+ * Se precisares de uma pista: Estás a definir o tamanho dos filhos. A base da hora e a
+ * do resumo não vão no pai .sessao.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 4 — Abre duas exceções ao alinhamento
+ * Onde começar: .f03 .sessao time; .f03 .estado
+ *
+ *   1. Na hora, substitui o alinhamento central por um alinhamento ao topo da fila.
+ *   2. Na etiqueta das vagas, escolhe o fundo. Deixa o resumo com o alinhamento do pai.
+ *
+ * Confirma: Observa a mesma sessão a 1100 px: a hora está no topo, o resumo fica a meio
+ * e as vagas estão no fundo.
+ * Se precisares de uma pista: align-self aplica-se a um filho de cada vez.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* ETAPA 5 — Passa para coluna e muda o título
+ * Onde começar: @media (max-width: 640px); segunda sessão no HTML
+ *
+ *   1. Até 640 px, muda cada sessão para coluna. Alinha os filhos à esquerda e retira a
+ *      altura mínima de 144 px.
+ *   2. Na mesma media query, repõe a base automática na hora e no resumo; alinha também
+ *      a etiqueta no início.
+ *   3. No HTML, muda o título das 15h30 para «Desenho de observação à mesa do café».
+ *      Conserva o título novo.
+ *
+ * Confirma: A 390 px, hora, resumo e vagas leem-se de cima para baixo, sem espaços da
+ * altura das bases antigas. A 768 px, voltam a ficar em fila.
+ * Se precisares de uma pista: Quando a direção passa a coluna, a base já não mede
+ * largura: passa a atuar na altura.
+ */
+
+/* Escreve ou completa aqui a regra desta etapa. */
+
+
+/* CONSULTA — MEDIDAS DESTA FICHA
+ * Entre sessões e entre os elementos de cada sessão: 16 px. Em fila: altura mínima de
+ * 144 px; 72 px para a hora; base de 192 px para o resumo.
+ * Até 640 px inclusive: empilhar hora, resumo e vagas; retirar a altura mínima e as
+ * bases fixas. Acima de 640 px: usar a fila.
+ * Larguras para testar: 390 px, 768 px e 1100 px. São larguras da janela.
+ * No código, escreve o valor e a unidade juntos: 16px.
+ */
+
+/* ANTES DE ENTREGAR
+ * No index.html, faz os três testes de «Quando é que está pronto?». Anota o que
+ * observaste em registo.md.
+ * Se quiseres aprofundar, o desafio opcional está no fim da página.
+ */

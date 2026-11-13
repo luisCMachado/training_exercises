@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>F03 · Agenda de oficinas</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-flex">
+    <!-- Ficha F03: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Flexbox / F03</p>
+        <h1>Agenda de oficinas</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> Em cada oficina, põe a hora no alto à esquerda, o resumo ao
+          centro e as vagas em baixo à direita. No telemóvel, mostra esses três elementos por baixo
+          uns dos outros.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                Entre sessões e entre os elementos de cada sessão: <strong>16 px</strong>. Em fila:
+                altura mínima de <strong>144 px</strong>; <strong>72 px</strong> para a hora; base
+                de <strong>192 px</strong> para o resumo.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Até <strong>640 px</strong> inclusive: empilhar hora, resumo e vagas; retirar a
+                altura mínima e as bases fixas. Acima de <strong>640 px</strong>: usar a fila.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                <strong>390 px</strong>: uma coluna por sessão. 768 e <strong>1100 px</strong>: hora
+                no topo, resumo a meio e vagas no fundo.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Agenda de oficinas</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO F03 | Classe do elemento que contém o exercício: f03. -->
+
+        <section class="f03" aria-labelledby="f03-titulo">
+          <h2 id="f03-titulo">Oficinas no café</h2>
+          <ol class="agenda">
+            <li class="sessao box">
+              <time datetime="14:00">14h00</time>
+              <div class="resumo">
+                <h3>Infusões da horta</h3>
+                <p>Reconhece três ervas pelo aroma.</p>
+              </div>
+              <span class="estado tag">4 vagas</span>
+            </li>
+            <li class="sessao box">
+              <time datetime="15:30">15h30</time>
+              <div class="resumo">
+                <h3>Um desenho por chávena</h3>
+                <p>Desenha à vista. O café empresta papel e lápis.</p>
+              </div>
+              <span class="estado tag">Lotação esgotada</span>
+            </li>
+            <li class="sessao box">
+              <time datetime="17:00">17h00</time>
+              <div class="resumo">
+                <h3>Prova de café</h3>
+                <p>Compara duas torras e regista as diferenças.</p>
+              </div>
+              <span class="estado tag">2 vagas</span>
+            </li>
+          </ol>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO F03 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p>
+          <strong>Já conheces:</strong> Listas ordenadas, classes e adaptação ao telemóvel com media
+          queries.
+        </p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> Numa fila, align-items alinha o conjunto na
+          vertical; align-self abre uma exceção para um filho. A direção também muda o significado
+          da base.
+        </p>
+        <ol>
+          <li>Mantém a ordem das sessões</li>
+          <li>Centra o conteúdo de uma sessão</li>
+          <li>Reserva espaço para o resumo</li>
+          <li>Abre duas exceções ao alinhamento</li>
+          <li>Passa para coluna e muda o título</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: encontra, na mesma sessão, a hora no topo, o resumo
+              ao centro e as vagas no fundo.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: o novo título da segunda oficina não invade a zona das
+              vagas.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: cada oficina lê-se de cima para baixo; a ordem das
+              três oficinas não se altera.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>
+          Só na sessão das 15h30, a 768 px ou mais, coloca o estado no topo. As outras horas e
+          estados devem ficar como estavam.
+        </p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>

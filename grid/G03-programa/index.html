@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>G03 · Programa semanal</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lab-grid">
+    <!-- Ficha G03: o conteúdo do café está assinalado dentro de main. -->
+
+    <header class="lab-head">
+      <div class="lab-wrap">
+        <p class="lab-kicker">Café da turma / Grid / G03</p>
+        <h1>Programa semanal</h1>
+        <p class="lab-brief">
+          <strong>Objetivo:</strong> Organiza a agenda de três dias. No telemóvel lê-se um dia e
+          depois as suas sessões, de cima para baixo. No computador, cada dia fica à esquerda e as
+          sessões desse dia aparecem lado a lado.
+        </p>
+
+        <nav class="lab-nav" aria-label="Atalhos da ficha">
+          <a href="#medidas">Medidas da ficha</a>
+          <a href="#pratica">Ver a página</a>
+          <a href="#testar">Como confirmar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="lab-main lab-wrap">
+      <div id="objetivos">
+        <section class="lab-measures" aria-labelledby="medidas">
+          <h2 id="medidas">Medidas desta ficha</h2>
+          <dl>
+            <div>
+              <dt>Medidas a usar</dt>
+              <dd>
+                <strong>14 px</strong> entre dias; <strong>12 px</strong> entre o título do dia e a
+                lista. Entre sessões: <strong>10 px</strong>. Interior de cada sessão: <strong>12
+                px</strong>. Coluna do dia a partir de <strong>640 px</strong>: <strong>128
+                px</strong>.
+              </dd>
+            </div>
+            <div>
+              <dt>Quando muda a disposição</dt>
+              <dd>
+                Base: dia por cima da lista. A partir de <strong>640 px</strong>: dia à esquerda. A
+                partir de <strong>1000 px</strong>: sessões de cada dia lado a lado.
+              </dd>
+            </div>
+            <div>
+              <dt>Resultado esperado</dt>
+              <dd>
+                <strong>390 px</strong>: dias e sessões empilhados. <strong>768 px</strong>: títulos
+                à esquerda, sessões empilhadas. <strong>1100 px</strong>: sessões na mesma fila.
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Larguras para testar:</strong> 390 px, 768 px e 1100 px. São larguras da janela
+            do navegador. Só escreves uma media query se o exercício a pedir.
+          </p>
+          <p>
+            <strong>No CSS:</strong> escreve <code>16px</code>, sem espaço entre o número e a
+            unidade.
+          </p>
+        </section>
+        <p class="lab-begin">
+          <strong>Primeiro passo:</strong> Abre <code>style.css</code> no editor e lê a etapa 1.
+          Quando fizeres uma alteração, guarda o ficheiro e atualiza esta página para veres o que
+          mudou.
+        </p>
+
+        <details class="lab-fold">
+          <summary>Ver o resultado esperado no computador e no telemóvel</summary>
+          <p>
+            Este esquema mostra as posições, sem escala. Para a largura intermédia, usa os testes no
+            fim. O asterisco assinala o elemento que a ficha pede para acrescentar.
+          </p>
+          <img
+            class="lab-scheme"
+            src="objetivo.svg"
+            alt="Esquema das disposições larga e estreita, descritas no objetivo e nos testes."
+          >
+        </details>
+      </div>
+      <p class="lab-cap" id="pratica">Área de trabalho · Programa semanal</p>
+      <div class="lab-practice">
+        <!-- INÍCIO DO EXERCÍCIO G03 | Classe do elemento que contém o exercício: g03. -->
+
+        <section class="g03" aria-labelledby="g03-titulo">
+          <h2 id="g03-titulo">Esta semana no café</h2>
+          <div class="semana">
+            <section class="dia box">
+              <h3>Terça-feira</h3>
+              <ol class="sessoes">
+                <li><time datetime="09:30">09h30</time> Prova de cafés</li>
+                <li><time datetime="16:00">16h00</time> Clube de leitura</li>
+              </ol>
+            </section>
+
+            <section class="dia box">
+              <h3>Quinta-feira</h3>
+              <ol class="sessoes">
+                <li><time datetime="10:00">10h00</time> Oficina de pão</li>
+                <li><time datetime="17:00">17h00</time> Troca de receitas</li>
+              </ol>
+            </section>
+
+            <section class="dia box">
+              <h3>Sábado</h3>
+              <ol class="sessoes">
+                <li><time datetime="11:00">11h00</time> Caderno de viagem</li>
+                <li><time datetime="15:30">15h30</time> Histórias à mesa</li>
+              </ol>
+            </section>
+          </div>
+        </section>
+
+        <!-- FIM DO EXERCÍCIO G03 | A partir daqui voltam as instruções da ficha. -->
+      </div>
+
+      <details class="lab-fold">
+        <summary>Etapas e conceitos desta ficha</summary>
+        <p>
+          <strong>Já conheces:</strong> Grid no pai de cada grupo; colunas fixas e flexíveis;
+          criação de colunas pelo navegador.
+        </p>
+        <p>
+          <strong>Com apoio nesta ficha:</strong> grid-auto-flow escolhe para onde entra a próxima
+          sessão. Com column e uma única fila, a sessão nova abre outra coluna.
+        </p>
+        <ol>
+          <li>Separa os três dias</li>
+          <li>Empilha as sessões de cada dia</li>
+          <li>Alinha o nome de cada dia</li>
+          <li>Põe as sessões lado a lado</li>
+          <li>Adiciona uma sessão na quinta</li>
+        </ol>
+        <p>Encontras as instruções de cada etapa em <code>style.css</code>.</p>
+      </details>
+
+      <section id="testar" class="lab-section">
+        <h2>Quando é que está pronto?</h2>
+        <p>
+          Usa o modo responsivo do navegador. Experimenta <strong>390 px</strong> (telemóvel),
+          <strong>768 px</strong> (intermédio) e <strong>1100 px</strong> (computador).
+        </p>
+        <ul class="lab-checks">
+          <li>
+            <label>
+              <input type="checkbox"> 390 px: dia, seguido da lista; as três sessões de quinta
+              aparecem por ordem, cada uma na sua fila.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 768 px: dias à esquerda, listas à direita; a sessão das 19h00
+              aparece abaixo da das 17h00.
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox"> 1100 px: quinta tem três colunas de sessões; terça e sábado
+              têm duas cada.
+            </label>
+          </li>
+        </ul>
+        <p class="lab-note">
+          Assinala os testes que passaram. As marcas desaparecem quando atualizas a página; guarda o
+          resultado em <code>registo.md</code>.
+        </p>
+      </section>
+
+      <details class="lab-section lab-extra">
+        <summary>Desafio opcional</summary>
+        <p>Apresenta a hora numa linha própria, em negrito, sem mexer no texto da atividade.</p>
+      </details>
+    </main>
+
+    <footer class="lab-foot">
+      <div class="lab-wrap">
+        <p>Entrega esta pasta com o teu CSS e o ficheiro <code>registo.md</code> preenchido.</p>
+        <a href="#pratica">Voltar à área de trabalho</a>
+      </div>
+    </footer>
+  </body>
+</html>
